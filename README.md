@@ -1,8 +1,8 @@
 # README
 
-#### ![image-20210705143529597](doc/img/readme/image-20210705143529597.png)
+![image-20210705143529597](doc/img/readme/image-20210705143529597.png)
 
-### 前言
+## 前言
 
 本商城是基于Spring Cloud、Nacos、Seata、Mysql、Redis、RocketMQ、canal、ElasticSearch、minio的微服务B2B2C电商商城系统，采用主流的互联网技术架构、全新的UI设计、支持集群部署、服务注册和发现以及拥有完整的订单流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发的电商平台系统。
 
@@ -10,7 +10,7 @@
 
 
 
-### 授权
+## 授权
 
 除开源版本外，本商城还提供商业版本的商城，欲知详情，请访问官网。
 
@@ -20,7 +20,7 @@
 
 
 
-### 项目链接
+## 项目链接
 
 JAVA后台：https://gitee.com/gz-yami/mall4cloud
 
@@ -32,7 +32,7 @@ uni-app：https://gitee.com/gz-yami/mall4cloud-uniapp
 
 
 
-### 技术介绍
+## 技术介绍
 
 
 
@@ -72,19 +72,14 @@ uni-app：https://gitee.com/gz-yami/mall4cloud-uniapp
 └── vue.config.js              # vue-cli 配置
 ```
 
-### 部署教程
 
-部署教程请参考该文件夹下的`/基本开发文档/mall4cloud开发环境搭建.md`以及`/开发环境搭建`目录下的中间件安装。
+## 运行相关截图
 
-
-
-### 运行相关截图
-
-#### 1.小程序截图
+### 1.小程序截图
 
 ![小程序](doc/img/readme/小程序.png)
 
-#### 2.uni-app截图
+### 2.uni-app截图
 
 ![uniapp](doc/img/readme/uniapp.png)
 
