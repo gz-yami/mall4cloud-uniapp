@@ -82,11 +82,11 @@ uni-app：https://gitee.com/gz-yami/mall4cloud-uniapp
 
 #### 1.小程序截图
 
-![1625472143277](/doc/img/readme/%E5%B0%8F%E7%A8%8B%E5%BA%8F-1625472143277.png)
+![小程序](doc/img/readme/小程序.png)
 
 #### 2.uni-app截图
 
-![uniapp1625469707350](/doc/img/readme/uniapp-1625469707350.png)
+![uniapp](doc/img/readme/uniapp.png)
 
 ## 提交反馈
 - Mall4j官网 https://www.mall4j.com
