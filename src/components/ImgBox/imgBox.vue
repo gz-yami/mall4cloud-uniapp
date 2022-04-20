@@ -26,7 +26,7 @@
 <script>
 const http = require('../../utils/http.js')
 import config from '../../utils/config.js'
-import { minIoImgUpdate } from '../../utils/api.js'
+// import { minIoImgUpdate } from '../../utils/api.js'
 export default {
   data() {
     return {
@@ -56,11 +56,23 @@ export default {
         sizeType: ['original', 'compressed'],
         sourceType: ['album', 'camera'],
         success: (res) => {
-          // 图片的本地临时文件路径列表
-          this.tempFilePaths = res.tempFilePaths;
-          this.tempFiles = res.tempFiles
-          console.log('resourcesActionType：', this.resourcesActionType)
-          console.log('选择本地图片res：', res)
+          wx.getImageInfo({
+            src:res.tempFilePaths[0],
+            success:(request)=>{
+            // 图片的本地临时文件路径列表
+              this.tempFilePaths = res.tempFilePaths;
+              this.tempFiles = res.tempFiles
+              console.log('resourcesActionType：', this.resourcesActionType)
+              console.log('选择本地图片res：', res)
+          },
+            fail:(err)=>{
+              uni.showToast({
+                title: '只能上传图片!',
+                icon: 'none'})
+            // console.log('非图片格式')
+          }
+          })
+
         }
       });
     },
@@ -72,17 +84,17 @@ export default {
       if(!this.tempFiles) {
         return
       }
-      this.feilType = this.tempFiles ? this.tempFiles[0].type.split('/') : null
-      if (this.feilType && this.feilType[0] !== 'image') {
-        if (this.notImg) {
-          uni.showToast({
-            title: '只能上传图片,其他文件已清除',
-            icon: 'none'
-          })
-          this.notImg = false
-        }
-        return
-      }
+      // this.feilType = this.tempFiles ? this.tempFiles[0].type.split('/') : null
+      // if (this.feilType && this.feilType[0] !== 'image') {
+      //   if (this.notImg) {
+      //     uni.showToast({
+      //       title: '只能上传图片,其他文件已清除',
+      //       icon: 'none'
+      //     })
+      //     this.notImg = false
+      //   }
+      //   return
+      // }
       const isSize = this.tempFiles[0].size / (1024 * 1024) < 2
       if (!isSize) {
         uni.showToast({
@@ -98,6 +110,11 @@ export default {
      * 获取上传图片数据
      */
     getUploadData() {
+      //minio特殊处理
+      if (this.resourcesActionType === '1') {
+        this.mioIoUpload()
+        return
+      }
       var params = {
         url: '/mall4cloud_biz/oss/info',
         method: 'GET',
@@ -126,7 +143,6 @@ export default {
      * 确认上传
      */
     confirmUpload() {
-      console.log(this.ossList)
       const attachFile = Object.assign({
         fileType: this.feilType[1],
         fileName: this.tempFiles[0].name,
@@ -141,12 +157,7 @@ export default {
         attachFile.filePath = '/' + this.dataForm.dir + this.ossList[0].fileName
         this.upload(this.resourcesUrl)
       }
-      // minIo 上传
-      else if (this.resourcesActionType === '1') {
-        attachFile.filePath = '/' + this.ossList[0].dir + this.ossList[0].fileName
-        console.log(attachFile)
-        this.mioIoUpload(this.ossList[0].actionUrl, this.tempFiles,attachFile.filePath)
-      }
+
       this.attachFiles.push(attachFile)
       this.ossList.splice(0, 1)
       if (this.ossList <= 0) {
@@ -159,8 +170,8 @@ export default {
      * 上传文件接口
      */
     upload(url) {
-      console.log('上传文件filePath：', filePath)
       const filePath = this.ossList[0].dir + this.ossList[0].fileName
+      console.log('上传文件filePath：', filePath)
       
       uni.uploadFile({
         url: url,
@@ -194,36 +205,53 @@ export default {
       })
 
     },
+    
     // mioIo 上传文件
-    mioIoUpload(url, files,filePath) {
-      const file = files[0]
-      console.log(url)
-      console.log(file)
-      console.log(filePath)
-      // var params = {
-      //   uploadUrl: url,
-      //   header: {
-      //     ContentType: file.type,
-      //   },
-      //   method: 'PUT',
-      //   data: file,
+    mioIoUpload() {
+      //const filePath = this.ossList[0].dir + this.ossList[0].fileName
+      const  params = {
+        url: '/mall4cloud_biz/oss/upload_minio',
+        filePath: this.tempFilePaths[0],
+        name: 'file',
+        callBack: res => {
+    
+          let data = JSON.parse(res).data
+          console.log(data)
+          const filePath=data.dir+data.fileName
+          this.resourcesVal = this.resourcesUrl + '/' + data.dir + data.fileName
+          // this.$emit('getImagePath', this.resourcesVal, this.imgId)
+          this.$emit('closeImgPop', this.tempFilePaths[0], '/' + filePath)
+        }
+      }
+      http.upload(params)
+      // const file = files[0]
+      // console.log(url)
+      // console.log(file)
+      // console.log(filePath)
+      // // var params = {
+      // //   uploadUrl: url,
+      // //   header: {
+      // //     ContentType: file.type,
+      // //   },
+      // //   method: 'PUT',
+      // //   data: file,
 
-      //   callBack: res => {
-          // uni.hideLoading()
-          // console.log(this.ossList)
-          // // const filePath = this.ossList[0].dir + this.ossList[0].fileName
-          // console.log(filePath)
-          // this.$emit('closeImgPop', this.tempFilePaths[0], filePath)
-      //   }
-      // }
-      // http.request(params)
-      minIoImgUpdate(url,file).then(res=>{
-        uni.hideLoading()
-          console.log(this.ossList)
-          // const filePath = this.ossList[0].dir + this.ossList[0].fileName
-          console.log(filePath)
-          this.$emit('closeImgPop', this.tempFilePaths[0], filePath)
-      })
+      // //   callBack: res => {
+      //     // uni.hideLoading()
+      //     // console.log(this.ossList)
+      //     // // const filePath = this.ossList[0].dir + this.ossList[0].fileName
+      //     // console.log(filePath)
+      //     // this.$emit('closeImgPop', this.tempFilePaths[0], filePath)
+      // //   }
+      // // }
+      // // http.request(params)
+      // minIoImgUpdate(url,file).then(res=>{
+      //   uni.hideLoading()
+      //     console.log(this.ossList)
+      //     // const filePath = this.ossList[0].dir + this.ossList[0].fileName
+      //     console.log(filePath)
+      //     this.$emit('closeImgPop', this.tempFilePaths[0], filePath)
+      // })
     },
 
     /**

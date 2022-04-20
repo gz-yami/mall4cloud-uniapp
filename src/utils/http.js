@@ -171,6 +171,32 @@ function mpAuthLogin(page, needCode) {
     '#wechat_redirect'
 }
 
+/**
+ * 上传图片
+ */
+function upload(params) {
+  uni.uploadFile({
+    url: config.domain + params.url,
+    filePath: params.filePath,
+    name: params.name,
+    header: {
+      'Authorization': params.login ? undefined : uni.getStorageSync('token')
+    },
+    dataType: 'json',
+    responseType: params.responseType === undefined ? 'json' : params.responseType,
+    success: (res) => {
+      // 如果有定义了params.callBack，则调用 params.callBack(res.data)
+      if (params.callBack) {
+        params.callBack(res.data)
+      }
+    },
+    fail: (err) => {
+      console.log(err)
+      uni.hideLoading()
+    }
+  })
+}
+
 exports.request = request
 exports.mpAuthLogin = mpAuthLogin
-
+exports.upload = upload
