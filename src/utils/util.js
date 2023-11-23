@@ -12,9 +12,7 @@ import http from './http.js'
 import * as cartCount from './cart-count.js'
 import { AppType, PayType } from './constant.js'
 import Big from 'big.js'
-// #ifdef H5
-import media from '@/static/audio/media.mp3'
-// #endif
+
 const wxs = number()
 
 const util = {
@@ -1285,7 +1283,6 @@ const util = {
     // #ifdef H5
     if (getApp().globalData.$isVideoInteract) return
     const audioObj = uni.createInnerAudioContext()
-    audioObj.src = media
     audioObj.play()
     audioObj.stop()
     audioObj.destroy()

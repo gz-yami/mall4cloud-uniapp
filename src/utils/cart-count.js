@@ -19,25 +19,21 @@ function getCartCount () {
     return
   }
   const params = {
-    url: '/mall4cloud_product/shop_cart/ma/prod_count',
+    url: '/mall4cloud_product/a/shop_cart/prod_count',
     method: 'GET',
     data: {}
   }
   http.request(params).then(res => {
     if (res) {
       uni.setTabBarBadge({
-        index: 3,
-        text: res > 99 ? '99+' : res + ''
+        index: 2,
+        text: res + ''
       })
     } else {
       uni.removeTabBarBadge({
-        index: 3
+        index: 2
       })
     }
-  }).catch(() => {
-    uni.removeTabBarBadge({
-      index: 3
-    })
   })
 }
 

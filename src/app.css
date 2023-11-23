@@ -1,11 +1,6 @@
-/*
-  页面或组件根节点必须有 Mall4j 标识类；
-  其中 page- 为页面标识，如 page-index 为首页；
-  component- 为组件标识，如 component-coupon 为优惠券组件；
-*/
 
 /* 页面共用样式 */
-.Mall4j[class*=page-] {
+page {
   min-width: 320rpx;
   max-width: 750rpx;
   margin: auto;
@@ -14,12 +9,12 @@
   font-family: -apple-system, Helvetica, sans-serif;
 }
 
-.Mall4j[class*=page-] image {
+page image {
   width: 100%;
   height: 100%;
 }
 
-.Mall4j[class*=page-] input {
+page input {
   font-size: 24rpx;
 }
 
@@ -104,7 +99,6 @@ uni-tabbar .uni-tabbar__bd {
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 28rpx;
 }
 
 .prods .item .text-box .discount-box {
@@ -161,7 +155,6 @@ uni-tabbar .uni-tabbar__bd {
 
 .line-prods .item .img {
   width: 180rpx;
-  min-width: 180rpx;
   height: 180rpx;
   border-radius: 10rpx;
   overflow: hidden;
@@ -169,12 +162,10 @@ uni-tabbar .uni-tabbar__bd {
 }
 
 .line-prods .item .text-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
   flex: 1;
-  margin-left: 10px;
+  margin-left: 20rpx;
   position: relative;
-  height: 93px;
+  height: 180rpx;
 }
 
 .line-prods .item .text-box .name {
@@ -185,7 +176,7 @@ uni-tabbar .uni-tabbar__bd {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-word;  /* 英文强制断开换行 */
+  word-break: break-all;  /* 英文强制断开换行 */
 }
 
 .line-prods .item .text-box .sku {
@@ -216,14 +207,13 @@ uni-tabbar .uni-tabbar__bd {
   margin-right: 10rpx;
   background: #fc1b35;
   color: #fff;
-  height: 32rpx;
-  line-height: 24rpx;
+  height: 36rpx;
+  line-height: 36rpx;
   border-radius: 4rpx;
   vertical-align: top;
-  padding: 4rpx 4rpx;
-  -webkit-box-sizing: border-box;
+  padding: 0 8rpx;
   box-sizing: border-box;
-  font-weight: 600;
+  font-size: 12px;
 }
 
 .line-prods .item .text-box .discount-box .coupons {
@@ -271,7 +261,6 @@ uni-checkbox .uni-checkbox-input.uni-checkbox-input-checked {
 uni-radio .uni-radio-input.uni-radio-input-checked::before,
 uni-checkbox .uni-checkbox-input.uni-checkbox-input-checked::before {
   font-size: 24rpx;
-  color: #fff;
 }
 
 /* input、textarea提示文字颜色 */
@@ -339,7 +328,8 @@ uni-checkbox .uni-checkbox-input.uni-checkbox-input-checked::before {
   display: block;
   width: 200rpx;
   height: 200rpx;
-  margin: 0 auto 20rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
 }
 
 .empty .text {
@@ -371,13 +361,11 @@ checkbox .wx-checkbox-input {
   height: 35rpx;
 }
 /*checkbox选中后样式  */
-radio .wx-radio-input.wx-radio-input-checked,
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   background: #fc1b35;
   border-color: #fc1b35;
 }
 /*checkbox选中后图标样式  */
-radio .wx-radio-input.wx-radio-input-checked::before,
 checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   text-align: center;
   font-size: 22rpx;
@@ -386,76 +374,4 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   transform: translate(-50%, -50%) scale(1);
   -webkit-transform: translate(-50%, -50%) scale(1);
 }
-
-/* 清除小程序按钮默认样式 */
-button {
-  line-height: 1;
-  margin:0;
-}
-button::after {
-  border:none;
-}
-input {
-  outline:none;
-  border:none;
-  list-style: none;
-}
 /* #endif */
-
-
-/* 输入框的遮罩层 */
-/* 输入框聚焦时，输入后（未失焦）直接跳转页面（比如商品详情的数量输入后直接点击-立即购买），
-   可触发失焦事件但会直接跳转页面，无法看到失焦事件的一些提示（输入内容错误之类的）
-   显示一个蒙层，使输入框失焦事件完整执行显示 */
-
-.input-mask {
-  position: fixed;
-  top: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.input-mask.show {
-  top: 0;
-}
-
-uni-page[data-page="/open-location"] {
-  height: 100vh;
-}
-
-
-/* 隐藏头部 */
-uni-page-head {
-  display: none;
-}
-
-/* 轮播图指示点 */
-uni-swiper .uni-swiper-dots-horizontal {
-  bottom: 20rpx;
-}
-
-/* 解决使用组件小程序图片不显示问题 */
-img-show{
-  width: 100% !important;
-  height: 100% !important;
-}
-
-/* z-paging 返回顶部按钮的图片样式 */
-.zp-back-to-top-img {
-  width: 40rpx !important;
-  height: 40rpx !important;
-}
-/* z-paging 底部加载更多的loading样式 */
-.zp-line-loading-image{
-  width: 24rpx !important;
-  height: 24rpx !important;
-}
-
-uni-radio .uni-radio-input :not(:empty){
-  border: 1px solid transparent!important;
-}
-uni-radio .uni-radio-input:empty {
-  background-color: #fff !important;
-}
