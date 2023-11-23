@@ -22,7 +22,7 @@ const AppType = {
   ALIMINI: 8 // 支付宝小程序
 }
 
-module.exports = {
+export {
   PayType,
   AppType
 }

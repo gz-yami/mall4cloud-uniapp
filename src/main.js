@@ -1,13 +1,22 @@
-import Vue from 'vue'
-import App from './App'
-import confirmPop from './components/ConfirmPop'
-Vue.component('ConfirmPop', confirmPop)
+import {
+  createSSRApp
+} from 'vue'
+import App from './App.vue'
+// 国际化
+import { setupI18n } from './lang'
+import { setupRouter } from './router'
 
-Vue.config.productionTip = false
-
-App.mpType = 'app'
-
-const app = new Vue({
-  ...App
+// 设置默认语言
+uni.getSystemInfo({
+  success: (res) => {
+    uni.setStorageSync('cloudLang', (res.appLanguage.indexOf('zh') !== -1) ? 'zh_CN' : 'en')
+  }
 })
-app.$mount()
+export function createApp () {
+  const app = createSSRApp(App)
+  app.use(setupI18n)
+  setupRouter(app)
+  return {
+    app
+  }
+}

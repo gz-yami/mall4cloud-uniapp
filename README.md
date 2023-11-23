@@ -1,122 +1,19 @@
-# README
+## 协议和授权
 
-![image-20210705143529597](doc/img/readme/image-20210705143529597.png)
+`mall4cloud` 并非一个开源软件，作者保留全部的权利。 擅自窃用，即属严重侵权行为，与盗窃无异。产生的一切任何后果责任由侵权者自负。
 
-## 前言
+## 商业使用
 
-本商城是基于Spring Cloud、Nacos、Seata、Mysql、Redis、RocketMQ、canal、ElasticSearch、minio的微服务B2B2C电商商城系统，采用主流的互联网技术架构、全新的UI设计、支持集群部署、服务注册和发现以及拥有完整的订单流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发的电商平台系统。
+本项目并非一个开源项目，**广州市蓝海创新科技有限公司** 拥该项目的100%版权。
 
-本商城致力于为中大型企业打造一个功能完整、易于维护的微服务B2B2C电商商城系统，采用主流微服务技术实现。后台管理系统包含平台管理，店铺管理、商品管理、订单管理、规格管理、权限管理、资源管理等模块
+商用请联系 **广州市蓝海创新科技有限公司** 获取授权，否则产生的一切任何后果责任由侵权者自负。
 
+## 🚫禁止
 
+将本项目的部分或全部代码和资源进行任何形式的再发行（上传GitHub、Gitee等任何公开发行的地方）
 
-## 授权
+## 侵权处理
 
-除开源版本外，本商城还提供商业版本的商城，欲知详情，请访问官网。
+- 支付人民币最低 `100万` 到 `侵权数量*商业版售价*10倍` 不等的侵权费用（含我方法律援助费用），本团队已完全委托律师事务所 司法保护
 
-商城官网：https://www.mall4j.com
-
-商城使用 AGPLv3 开源，请遵守 AGPLv3 的相关条款，或者联系作者获取商业授权(https://www.mall4j.com)
-
-
-
-## 项目链接
-
-JAVA后台：https://gitee.com/gz-yami/mall4cloud
-
-平台端：https://gitee.com/gz-yami/mall4cloud-platform
-
-商家端：https://gitee.com/gz-yami/mall4cloud-multishop
-
-uni-app：https://gitee.com/gz-yami/mall4cloud-uniapp
-
-
-## 启动
-
-- 安装node模块（不要用cnpm，否则会出现不可预知的后果）
-
-```
-npm install
-```
-
-- 运行
-
-```
-npm run dev:h5
-```
-
-- 部署
-
-```
-npm run build:h5
-```
-
-
-
-## 技术介绍
-
-
-
-本项目是一个uniapp的项目，使用cli进行构建，目录结构如下
-
-
-
-```
-├── public                     # 公共文件目录
-│     └── index.html           # html模版 
-├── src                        # 源代码
-│   ├── components             # 公共组件
-│   ├── js_sdk                 # uniapp第三方插件目录
-│   ├── packageActivities      # 活动功能分包
-│   ├── packageShop            # 店铺功能分包
-│   ├── pages                  # 主包
-│   ├── static                 # 静态资源
-│   │   │── empty-img          # 提示图片
-│   │   │── images             # 各页面的图片资源
-│   │   └── tabbar             # 底部tab栏的图标
-│   ├── utils                  # 存放通用工具
-│   ├── wxs                    # wxs文件目录  
-│   ├── app.css                # 全局样式
-│   ├── App.vue                # 入口页面
-│   ├── main.js                # 初始化入口文件
-│   ├── mainfest.json          # uniapp项目配置文件
-│   ├── pages.json             # 全局页面配置文件
-│   ├── popup.css              # 公共弹窗css样式
-│   ├── router.js              # 导航路由
-│   └── uni.scss               # uni-app内置的常用样式变量
-├── .eslintignore              # eslint忽略配置
-├── .eslintrc.js               # eslint规则制定文件
-├── babel.config.js            # babel配置
-├── package-lock.json          # 锁定安装时包的版本号
-├── package.json               # package.json 项目基本信息
-├── postcss.config             # postcss配置文件
-└── vue.config.js              # vue-cli 配置
-```
-
-
-## 运行相关截图
-
-### 1.小程序截图
-
-![小程序](doc/img/readme/小程序.png)
-
-### 2.uni-app截图
-
-![uniapp](doc/img/readme/uniapp.png)
-
-## 提交反馈
-- Mall4j官网 https://www.mall4j.com
-- 如需购买商业版源码，请联系商务微信
-
-  ![输入图片说明](https://19838323.s21i.faiusr.com/4/4/ABUIABAEGAAgksmNlAYojomK2gIwrAI4rAI!160x160.png)
-
-
-- mall4cloud开源技术QQ群：561496886
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/134157_dd977d46_5094767.png "微信图片_20211119134107.png")
-
-## springboot版本商城请点击
-https://gitee.com/gz-yami/mall4j
-
-
-## 更多信息请查看官网 <https://www.mall4j.com>
+- 个人行为将直接收集材料邮寄贵司侵权律师函，若出现司法诉讼将直接影响当事人征信档案等特此说明

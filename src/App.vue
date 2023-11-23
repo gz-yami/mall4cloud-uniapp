@@ -1,17 +1,15 @@
 <script>
 // app.js
-var http = require('./utils/http.js')
-var util = require('./utils/util.js')
 import { AppType } from './utils/constant.js'
 export default {
-  onLaunch: function(options) {
+  onLaunch: function () {
     // APP模式下保持竖屏
     // #ifdef APP-PLUS
     plus.screen.lockOrientation('portrait-primary')
     // #endif
     // #ifdef H5
     uni.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         // 客户端平台，值域为：ios、android
         if (res.platform == 'ios') {
           uni.setStorageSync('iosUrl', window.location.href.split('#')[0])
@@ -20,11 +18,11 @@ export default {
     })
     // #endif
   },
-  onShow: function() {
+  onShow: function () {
     // #ifdef H5
     // 判断浏览器环境
     uni.setStorageSync('appType', 4) // 普通H5
-    var ua = navigator.userAgent.toLowerCase()
+    const ua = navigator.userAgent.toLowerCase()
     if (ua.search(/MicroMessenger/i) > -1) {
       // 微信环境
       uni.setStorageSync('appType', 2)
@@ -78,7 +76,9 @@ export default {
   }
 }
 </script>
-<style>
+
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
+<style lang="scss">
 @import "./app.css";
 
 /* 隐藏头部 */
