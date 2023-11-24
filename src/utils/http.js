@@ -162,7 +162,7 @@ const http = {
                   if (modalRes.confirm) {
                     // 跳转登录页面
                     uni.navigateTo({
-                      url: '/package-user/pages/user-login/user-login'
+                      url: '/pages/login/login'
                     })
                   } else if (modalRes.cancel) {
                     uni.switchTab({

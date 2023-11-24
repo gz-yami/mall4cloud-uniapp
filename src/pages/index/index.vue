@@ -257,8 +257,8 @@ const Data = reactive({
 const { indexImgs, categoryList, selectedIndex, categoryProdList, isLoadAll, categoryScrollLeft } = toRefs(Data)
 
 onShow(() => {
-  const tempuid = uni.getStorageSync('tempUid')
-  const token = uni.getStorageSync('token')
+  const tempuid = uni.getStorageSync('cloudTempUid')
+  const token = uni.getStorageSync('cloudToken')
 
   // #ifdef MP-WEIXIN
   if (!(!tempuid && !token)) {

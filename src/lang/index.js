@@ -15,7 +15,7 @@ const localeData = {
   // 如果想在composition api中使用需要设置为false
   legacy: false,
   // 默认语言
-  locale: uni.getStorageSync('cloudLang') || 'zh_CN',
+  locale: uni.getStorageSync('lang') || 'zh_CN',
   // 所有语言
   messages
 }

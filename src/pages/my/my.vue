@@ -223,7 +223,7 @@ const { isNotLogged, userInfo, orderCountInfo } = toRefs(Data)
 
 onShow(() => {
   // 排除 tempToken 影响，真实登陆后再请求数据
-  if (uni.getStorageSync('token')) {
+  if (uni.getStorageSync('cloudToken')) {
     // 查询用户信息
     queryUserInfo()
     // 加载订单数据
@@ -312,7 +312,7 @@ const toAddressList = () => {
 
 // 去免费开店
 const toFreeShop = () => {
-  if (uni.getStorageSync('token')) {
+  if (uni.getStorageSync('cloudToken')) {
     uni.navigateTo({
       url: '/pages/free-shop/free-shop'
     })
