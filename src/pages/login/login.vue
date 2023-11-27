@@ -156,8 +156,8 @@ const login = () => {
     }
   }
   http.request(params).then((res) => {
-    uni.setStorageSync('token', res.accessToken)
-    uni.setStorageSync('loginResult', res) // 保存整个登录数据
+    uni.setStorageSync('cloudToken', res.accessToken)
+    uni.setStorageSync('cloudLoginResult', res) // 保存整个登录数据
     uni.reLaunch({ // 关闭所有页面，打开首页
       url: '/pages/index/index'
     })

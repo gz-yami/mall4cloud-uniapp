@@ -12,7 +12,7 @@ export default {
       success: function (res) {
         // 客户端平台，值域为：ios、android
         if (res.platform == 'ios') {
-          uni.setStorageSync('iosUrl', window.location.href.split('#')[0])
+          uni.setStorageSync('cloudIosUrl', window.location.href.split('#')[0])
         }
       }
     })
@@ -21,16 +21,16 @@ export default {
   onShow: function () {
     // #ifdef H5
     // 判断浏览器环境
-    uni.setStorageSync('appType', 4) // 普通H5
+    uni.setStorageSync('cloudAppType', 4) // 普通H5
     const ua = navigator.userAgent.toLowerCase()
     if (ua.search(/MicroMessenger/i) > -1) {
       // 微信环境
-      uni.setStorageSync('appType', 2)
+      uni.setStorageSync('cloudAppType', 2)
       http.mpAuthLogin()
     }
     if (ua.search(/Alipay/i) > -1) {
       // 支付宝环境
-      uni.setStorageSync('appType', 7)
+      uni.setStorageSync('cloudAppType', 7)
     }
     const state = util.getUrlKey('state')
     const code = util.getUrlKey('code')
@@ -48,19 +48,19 @@ export default {
     uni.getSystemInfo({
       success: (sysInfo) => {
         if (sysInfo.platform == 'android') {
-          uni.setStorageSync('appType', AppType.ANDROID)
+          uni.setStorageSync('cloudAppType', AppType.ANDROID)
         } else {
-          uni.setStorageSync('appType', AppType.IOS)
+          uni.setStorageSync('cloudAppType', AppType.IOS)
         }
       }
     })
     // #endif
     // #ifdef MP-WEIXIN
-    uni.setStorageSync('appType', AppType.MINI)
+    uni.setStorageSync('cloudAppType', AppType.MINI)
     // #endif
 
     // #ifdef MP-ALIPAY
-    uni.setStorageSync('appType', AppType.ALI)
+    uni.setStorageSync('cloudAppType', AppType.ALI)
     // #endif
   },
   globalData: {

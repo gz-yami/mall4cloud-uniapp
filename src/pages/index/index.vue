@@ -324,14 +324,14 @@ const login = (url, code) => {
     url,
     data: code
   }).then((res) => {
-    uni.setStorageSync('token', res.accessToken)
-    uni.setStorageSync('loginResult', res) // 保存整个登录数据
+    uni.setStorageSync('cloudToken', res.accessToken)
+    uni.setStorageSync('cloudLoginResult', res) // 保存整个登录数据
     queryDataGroup() // 查询页面所有数据
   }).catch(err => {
     // 异常
     uni.hideLoading()
     if (err.code === 'A04001') {
-      uni.setStorageSync('tempUid', err.data) // token或tempUid
+      uni.setStorageSync('cloudTempUid', err.data) // token或tempUid
       // 社交账号未绑定
       uni.showModal({
         title: '提示',

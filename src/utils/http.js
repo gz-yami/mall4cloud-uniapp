@@ -11,7 +11,7 @@ const http = {
         networkType = res.networkType
       }
     })
-    if (networkType === 'none' && !uni.getStorageSync('watchingNetworkFlag')) {
+    if (networkType === 'none' && !uni.getStorageSync('cloudWatchingNetworkFlag')) {
       // 开启网络监听
       uni.onNetworkStatusChange(networkCallback)
       return
@@ -285,7 +285,7 @@ const http = {
 
 // 网络监听回调事件
 const networkCallback = function (res) {
-  uni.setStorageSync('watchingNetworkFlag', 1)
+  uni.setStorageSync('cloudWatchingNetworkFlag', 1)
   if (res.isConnected) {
     uni.removeStorageSync('watchingNetworkFlag')
     uni.reLaunch({

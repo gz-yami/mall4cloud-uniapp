@@ -48,6 +48,30 @@
 				"navigationBarTitleText": "用户设置"
 			}
 		},
+    {
+			"path": "pages/address-list/address-list",
+			"style": {
+				"navigationBarTitleText": "地址管理"
+			}
+		},
+    {
+			"path": "pages/edit-address/edit-address",
+			"style": {
+				"navigationBarTitleText": "编辑地址"
+			}
+		},
+    {
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+    {
+			"path": "pages/submit-order/submit-order",
+			"style": {
+				"navigationBarTitleText": "提交订单"
+			}
+		},
   ],
   // 分包配置
   "subPackages" : [

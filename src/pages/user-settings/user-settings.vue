@@ -112,8 +112,8 @@ const loginOut = () => {
     method: 'post'
   }
   http.request(params).then(() => {
-    uni.removeStorageSync('token')
-    uni.removeStorageSync('userDetails')
+    uni.removeStorageSync('cloudToken')
+    uni.removeStorageSync('cloudUserDetails')
     uni.switchTab({
       url: '/pages/my/my'
     })

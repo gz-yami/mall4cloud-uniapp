@@ -142,7 +142,6 @@
       </view>
       <view
         class="price-box"
-        @tap="showPriceDetPopup"
       >
         <view class="total">
           <view class="text">

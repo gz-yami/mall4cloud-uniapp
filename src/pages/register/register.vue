@@ -191,8 +191,8 @@ const getRegister = () => {
   }
   http.request(params).then((res) => {
     Data.isShowSuccessPopup = true
-    uni.setStorageSync('token', res.accessToken)
-    uni.setStorageSync('loginResult', res) // 保存整个登录数据
+    uni.setStorageSync('cloudToken', res.accessToken)
+    uni.setStorageSync('cloudLoginResult', res) // 保存整个登录数据
     setTimeout(() => {
       uni.switchTab({
         url: '/pages/index/index'
