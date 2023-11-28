@@ -698,7 +698,7 @@ const toCart = () => {
 */
 const toShopIndex = () => {
   uni.navigateTo({
-    url: `/pages/shop-page/shop-index?shopId=${Data.shopId}`
+    url: `/pages/shop-index/shop-index?shopId=${Data.shopId}`
   })
 }
 </script>

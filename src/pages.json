@@ -72,6 +72,48 @@
 				"navigationBarTitleText": "提交订单"
 			}
 		},
+    {
+			"path": "pages/payment/payment",
+			"style": {
+				"navigationBarTitleText": "订单支付"
+			}
+		},
+    {
+			"path": "pages/payment-result/payment-result",
+			"style": {
+				"navigationBarTitleText": "支付结果"
+			}
+		},
+    {
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "我的订单"
+			}
+		},
+    {
+			"path": "pages/order-detail/order-detail",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+    {
+			"path": "pages/shop-index/shop-index",
+			"style": {
+				"navigationBarTitleText": "店铺首页"
+			}
+		},
+    {
+			"path": "pages/shop-prods/shop-prods",
+			"style": {
+				"navigationBarTitleText": "店铺商品"
+			}
+		},
+    {
+			"path": "pages/shop-category/shop-category",
+			"style": {
+				"navigationBarTitleText": "店铺分类"
+			}
+		},
   ],
   // 分包配置
   "subPackages" : [
