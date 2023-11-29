@@ -287,7 +287,7 @@ const http = {
 const networkCallback = function (res) {
   uni.setStorageSync('cloudWatchingNetworkFlag', 1)
   if (res.isConnected) {
-    uni.removeStorageSync('watchingNetworkFlag')
+    uni.removeStorageSync('cloudWatchingNetworkFlag')
     uni.reLaunch({
       url: '/pages/index/index'
     })

@@ -380,7 +380,7 @@ const skuPopupConfirm = () => {
     })
   }
   if (Data.skuPopConfirmType === 2) {
-    uni.setStorageSync('shopCartItem', JSON.stringify({
+    uni.setStorageSync('cloudShopCartItem', JSON.stringify({
       count: Data.prodNumber,
       shopId: Data.prodInfo.shopId,
       skuId: Data.defaultSku.skuId,
@@ -666,7 +666,7 @@ const getCartCount = () => {
     method: 'GET',
     data: {}
   }
-  if (uni.getStorageSync('token')) {
+  if (uni.getStorageSync('cloudToken')) {
     http.request(params).then((res) => {
       if (res) {
         Data.cartCount = res

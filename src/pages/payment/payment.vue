@@ -92,7 +92,7 @@ const Data = reactive({
   isWechat: false, // 是否为微信环境
   payType: PayType.ALIPAY_H5,
   PayTypeConstant: PayType,
-  appType: uni.getStorageSync('appType'),
+  appType: uni.getStorageSync('cloudAppType'),
   totalFee: 0,
   totalScore: 0,
 

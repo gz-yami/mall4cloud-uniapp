@@ -114,6 +114,30 @@
 				"navigationBarTitleText": "店铺分类"
 			}
 		},
+    {
+			"path": "pages/search-page/search-page",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+    {
+			"path": "pages/search-list/search-list",
+			"style": {
+				"navigationBarTitleText": "搜索列表"
+			}
+		},
+    {
+			"path": "pages/new-prods/new-prods",
+			"style": {
+				"navigationBarTitleText": "新品推荐"
+			}
+		},
+    {
+			"path": "pages/free-shop/free-shop",
+			"style": {
+				"navigationBarTitleText": "免费开店"
+			}
+		}
   ],
   // 分包配置
   "subPackages" : [

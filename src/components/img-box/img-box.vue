@@ -172,7 +172,7 @@ const upload = (url) => {
   uni.uploadFile({
     url,
     header: {
-      Authorization: uni.getStorageSync('token')
+      Authorization: uni.getStorageSync('cloudToken')
     },
     filePath: Data.tempFiles[0].path,
     name: 'file',

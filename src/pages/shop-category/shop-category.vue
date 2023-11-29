@@ -145,7 +145,7 @@ const { shopInfo, firstCategoryList, secondCategoryList, selectedIndex } = toRef
 
 onLoad((options) => {
   Data.shopId = options.shopId
-  Data.shopInfo = uni.getStorageSync('shopInfo')
+  Data.shopInfo = uni.getStorageSync('cloudShopInfo')
   getCategoryList()
 })
 

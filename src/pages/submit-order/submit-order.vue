@@ -503,7 +503,7 @@ const loadOrder = (isFirst) => {
     data: {
       addrId: Data.addrId,
       dvyType: 3,
-      shopCartItem: Data.orderEntry === '1' ? JSON.parse(uni.getStorageSync('shopCartItem')) : undefined
+      shopCartItem: Data.orderEntry === '1' ? JSON.parse(uni.getStorageSync('cloudShopCartItem')) : undefined
     }
   }
   http.request(params).then(res => {

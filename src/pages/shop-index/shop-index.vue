@@ -178,7 +178,7 @@ const getShopInfo = () => {
   }
   http.request(params).then(res => {
     Data.shopInfo = res
-    uni.setStorageSync('shopInfo', res)
+    uni.setStorageSync('cloudShopInfo', res)
   })
 }
 

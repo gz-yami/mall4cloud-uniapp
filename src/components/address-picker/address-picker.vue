@@ -100,16 +100,16 @@ const initCityData = (provinceId, cityId, areaId) => {
     method: 'GET',
     data: {}
   }
-  if (!uni.getStorageSync('provArray')) {
+  if (!uni.getStorageSync('cloudProvArray')) {
     http.request(params).then((res) => {
       Data.provArray = res
-      uni.setStorageSync('provArray', res)
+      uni.setStorageSync('cloudProvArray', res)
       initAll(res, provinceId, cityId, areaId)
       uni.hideLoading()
     })
   } else {
-    Data.provArray = uni.getStorageSync('provArray')
-    initAll(uni.getStorageSync('provArray'), provinceId, cityId, areaId)
+    Data.provArray = uni.getStorageSync('cloudProvArray')
+    initAll(uni.getStorageSync('cloudProvArray'), provinceId, cityId, areaId)
   }
 }
 

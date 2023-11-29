@@ -163,7 +163,7 @@ onLoad((options) => {
   Data.shopId = options.shopId
   Data.shopSecondaryCategoryId = options.shopSecondaryCategoryId
   Data.keyword = options.keyword
-  Data.shopInfo = uni.getStorageSync('shopInfo')
+  Data.shopInfo = uni.getStorageSync('cloudShopInfo')
   getProd()
 })
 
