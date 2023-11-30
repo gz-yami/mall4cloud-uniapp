@@ -252,10 +252,13 @@
           class="upload license-img"
         >
           <view
-            class="img"
+            class="img-box"
             @tap="getUploadImg('mobileBackground')"
           >
-            <image :src="mobileBackground" />
+            <image
+              class="img"
+              :src="mobileBackground"
+            />
           </view>
         </view>
       </view>

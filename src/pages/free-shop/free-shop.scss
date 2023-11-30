@@ -111,7 +111,7 @@ page {
   height: 300px;
 }
 
-.free-shop .item .upload-box .upload.license-img uni-image >>> img {
+.free-shop .item .upload-box .upload.license-img .img {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -132,7 +132,7 @@ page {
   margin-top: 10rpx;
 }
 
-.free-shop .item .upload-box .upload .img {
+.free-shop .item .upload-box .upload .img-box {
   position: absolute;
   width: 100%;
   height: 100%;
