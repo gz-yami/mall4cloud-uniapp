@@ -1,13 +1,14 @@
-import Vue from 'vue'
-import App from './App'
-import confirmPop from './components/ConfirmPop'
-Vue.component('ConfirmPop', confirmPop)
+import {
+  createSSRApp
+} from 'vue'
+import App from './App.vue'
+// 国际化
+import { setupRouter } from './router'
 
-Vue.config.productionTip = false
-
-App.mpType = 'app'
-
-const app = new Vue({
-  ...App
-})
-app.$mount()
+export function createApp () {
+  const app = createSSRApp(App)
+  setupRouter(app)
+  return {
+    app
+  }
+}
