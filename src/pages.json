@@ -143,12 +143,6 @@
   "subPackages" : [
   ],
 
-  "preloadRule": {
-    "pages/index/index": {
-      "network": "all",
-      "packages": ["package-activities"]
-    }
-  },
   "tabBar": {
     "selectedColor": "#fc1b35",
     "color": "#333333",
