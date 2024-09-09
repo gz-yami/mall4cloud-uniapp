@@ -144,4 +144,5 @@ uni-app：[https://gitee.com/gz-yami/mall4cloud-uniapp](https://gitee.com/gz-yam
 [https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j)
 
 
-  ## 更多信息请查看主项目 [https://gitee.com/gz-yami/mall4cloud](https://gitee.com/gz-yami/mall4cloud)
+  ## 更多信息请查看主项目 
+[https://gitee.com/gz-yami/mall4cloud](https://gitee.com/gz-yami/mall4cloud)
