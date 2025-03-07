@@ -1,5 +1,5 @@
 {
-    "name" : "",
+    "name" : "mall4cloud-uniapp",
     "appid" : "__UNI__A82A7B7",
     "description" : "",
     "locale": "zh-Hans",
@@ -78,14 +78,6 @@
         "devServer" : {
             "disableHostCheck" : true,
             "port" : 80
-        },
-        "sdkConfigs" : {
-            "maps" : {
-                "qqmap" : {
-                    // 用于h5端ip定位
-                    "key" : ""
-                }
-            }
         }
     },
     "uniStatistics" : {
