@@ -138,10 +138,6 @@
 			}
 		}
   ],
-  // 分包配置
-  "subPackages" : [
-  ],
-
   "tabBar": {
     "selectedColor": "#fc1b35",
     "color": "#333333",
