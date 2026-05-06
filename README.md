@@ -130,9 +130,7 @@ uni-app：[https://gitee.com/gz-yami/mall4cloud-uniapp](https://gitee.com/gz-yam
 
   - Mall4j官网 [https://www.mall4j.com](https://www.mall4j.com)
 
-  - 如需购买商业版源码，请联系商务微信
-
-![输入图片说明](https://img.mall4j.com/contact.png-v)
+  - 如需购买商业版源码，请联系Mall4j官网
 
 
   - mall4cloud开源技术QQ群：561496886
