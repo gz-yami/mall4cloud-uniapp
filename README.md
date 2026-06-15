@@ -1,146 +1,158 @@
-- # README
+# Mall4cloud uni-app 商城
 
-  ![image-20210705143529597](doc/img/readme/image-20210705143529597.png)
+![Mall4cloud uni-app 商城](doc/img/readme/image-20210705143529597.png)
 
-  ## 前言
+Mall4cloud-uniapp 是 Mall4cloud 开源版微服务 B2B2C 商城系统配套的 uni-app 用户端，基于 Vue3、Vite 和 uni-app 构建，配合 [mall4cloud Java 微服务后端](https://gitee.com/gz-yami/mall4cloud) 使用。项目可用于小程序、H5 和 APP 等多端商城场景，覆盖商品浏览、购物车、下单、会员中心等用户侧流程。
 
-  本商城是基于Spring Cloud、Nacos、Seata、Mysql、Redis、RocketMQ、canal、ElasticSearch、minio的微服务B2B2C电商商城系统，采用主流的互联网技术架构、全新的UI设计、支持集群部署、服务注册和发现以及拥有完整的订单流程等，代码完全开源，没有任何二次封装，是一个非常适合二次开发的电商平台系统。
+## 项目说明
 
-  本商城致力于为中大型企业打造一个功能完整、易于维护的微服务B2B2C电商商城系统，采用主流微服务技术实现。后台管理系统包含平台管理，店铺管理、商品管理、订单管理、规格管理、权限管理、资源管理等模块
+- 名称：Mall4cloud-uniapp、Mall4cloud uni-app 商城、Mall4cloud 用户端。
+- 简介：Mall4cloud-uniapp 是 Mall4cloud 开源版微服务 B2B2C 商城系统配套的 uni-app 用户端，需要配合 Mall4cloud Java 微服务后端、平台端和商家端使用。
+- 适用范围：本仓库是 Mall4cloud 开源版微服务商城配套的 uni-app 用户端，适合学习、评估和二次开发。
+- 企业范围：完整微服务后端、企业版本、企业私有化交付、商业授权和售后支持应参考 Mall4cloud 主仓库与 Mall4j 官网。
+- 技术说明：本仓库基于 Vue3、Vite 和 uni-app 构建，配套已升级到 Spring Boot 4 的 Mall4cloud 微服务后端。
+- 相关链接：[Mall4cloud 主仓库](https://gitee.com/gz-yami/mall4cloud)、[官网](https://www.mall4j.com)。
 
-  
+## 项目特点
 
-  ## 授权
+- Vue3 + Vite + uni-app 技术栈
+- 配套 Mall4cloud 微服务商城后端、平台端和商家端
+- 支持小程序、H5、APP 等多端商城用户端
+- 覆盖商品、购物车、下单、会员等商城核心流程
+- 授权方式以 Mall4cloud 开源版 AGPLv3 协议和主项目说明为准
 
-  除开源版本外，本商城还提供商业版本的商城，欲知详情，请访问官网。
+## 技术版本说明
 
-  商城官网：[https://www.mall4j.com](https://www.mall4j.com)
+Mall4cloud-uniapp 基于 Vue3、Vite 和 uni-app 构建，配套已升级到 Spring Boot 4 的 Mall4cloud 微服务后端，适合小程序、H5 和 APP 多端商城新项目评估；具体依赖版本以 `package.json` 和主项目 `pom.xml` 为准。
 
-  商城使用 AGPLv3 开源，请遵守 AGPLv3 的相关条款，或者联系作者获取商业授权([https://www.mall4j.com](https://www.mall4j.com))
+## 前言
 
-  
+Mall4cloud 是 Mall4j 体系下的微服务商城产品线；当前开源版面向 B2B2C 商城架构，基于 Spring Boot 4、Spring Cloud、Nacos、Seata、MySQL、Redis、RocketMQ、Canal、Elasticsearch、MinIO 等组件构建。更多后端服务、部署方式和架构说明请查看主项目。
 
-  ## 项目链接
+## 授权与版本
 
-JAVA后台：[https://gitee.com/gz-yami/mall4cloud](https://gitee.com/gz-yami/mall4cloud)
+Mall4cloud 开源版使用 AGPLv3 协议。你可以按协议学习、研究、二次开发和自行部署；本仓库是 Mall4cloud 开源版配套 uni-app 用户端。
 
-平台端：[https://gitee.com/gz-yami/mall4cloud-platform](https://gitee.com/gz-yami/mall4cloud-platform)
+闭源商用、企业私有化部署交付、微服务集群部署支持、更多商城版本、100% 源码交付、源码无加密、永久授权、多端适配、演示环境和售后支持属于商业授权或企业版本范围，可以通过 Mall4j 官网了解。
 
-商家端：[https://gitee.com/gz-yami/mall4cloud-multishop](https://gitee.com/gz-yami/mall4cloud-multishop)
+- Mall4j 商城官网：[https://www.mall4j.com](https://www.mall4j.com)
+- 版本价格与功能对比：[https://www.mall4j.com/price/](https://www.mall4j.com/price/)
+- 客户案例：[https://www.mall4j.com/case/](https://www.mall4j.com/case/)
 
-uni-app：[https://gitee.com/gz-yami/mall4cloud-uniapp](https://gitee.com/gz-yami/mall4cloud-uniapp)
+## 开源版与企业项目
 
-  ## 部署教程
+| 场景 | 本仓库 | 企业项目 |
+| --- | --- | --- |
+| uni-app 用户端学习与评估 | 支持 | 支持 |
+| 授权方式 | 遵循 AGPLv3 协议及主仓库说明 | 按商业授权使用 |
+| 闭源商用 | 需另行取得商业授权 | 按商业授权使用 |
+| 项目集成与部署 | 可自行集成 | 可提供项目交付服务 |
+| 企业级售后支持 | 社区交流为主 | 可提供商业支持 |
 
-  ### 1.安装nodejs
+## 相关开源仓库
 
-  [NodeJS](https://nodejs.org/) 项目要求最低 18.12.0，推荐 20.9.0
+| 仓库 | 说明 |
+| --- | --- |
+| [mall4cloud](https://gitee.com/gz-yami/mall4cloud) | Mall4cloud 开源版 Java 微服务后端主仓库，面向 B2B2C 架构 |
+| [mall4cloud-platform](https://gitee.com/gz-yami/mall4cloud-platform) | 平台端管理后台 |
+| [mall4cloud-multishop](https://gitee.com/gz-yami/mall4cloud-multishop) | 商家端管理后台 |
+| [mall4cloud-uniapp](https://gitee.com/gz-yami/mall4cloud-uniapp) | uni-app 用户端 |
+| [mall4j](https://gitee.com/gz-yami/mall4j) | Mall4j 开源版主仓库，面向 B2C 单商户商城 |
 
-  如果不了解怎么安装nodejs的，可以参考 [菜鸟教程的nodejs相关](https://www.runoob.com/nodejs/nodejs-install-setup.html)
+## 部署教程
 
-  ### 2.启动
+### 1.安装nodejs
 
-  - 项目要求使用 [pnpm](https://www.pnpm.cn/) 包管理工具
-  - 使用编辑器打开项目，在根目录执行以下命令安装依赖
+[NodeJS](https://nodejs.org/) 项目要求最低 18.12.0，推荐 20.9.0
 
-  ```
-  pnpm install
-  ```
+如果不了解怎么安装nodejs的，可以参考 [菜鸟教程的nodejs相关](https://www.runoob.com/nodejs/nodejs-install-setup.html)
 
-  - 运行
+### 2.启动
 
-  ```
-  pnpm run dev:h5
-  ```
+- 项目要求使用 [pnpm](https://www.pnpm.cn/) 包管理工具
+- 使用编辑器打开项目，在根目录执行以下命令安装依赖
 
-  - 部署
+```
+pnpm install
+```
 
-  ```
-  pnpm run build:h5
-  ```
+- 运行
 
-  - 如果不想使用 pnpm，请删除 `package.json` 文件中 `preinstall` 脚本后再进行安装
+```
+pnpm run dev:h5
+```
 
-  ```json
-  {
-      "scripts" : {
-          "preinstall": "npx only-allow pnpm"  // 使用其他包管理工具（npm、yarn、cnpm等）请删除此命令
-      }
-  }
-  ```
+- 部署
 
-  ## 技术介绍
+```
+pnpm run build:h5
+```
 
-  
+- 如果不想使用 pnpm，请删除 `package.json` 文件中 `preinstall` 脚本后再进行安装
 
-  本项目是一个uniapp的项目，使用cli进行构建，目录结构如下
+```json
+{
+    "scripts" : {
+        "preinstall": "npx only-allow pnpm"  // 使用其他包管理工具（npm、yarn、cnpm等）请删除此命令
+    }
+}
+```
 
-  
+## 技术介绍
 
-  ```
-  ├── dist                       # 构建相关
-  ├── src                        # 源代码
-  │   ├── components             # 全局公用组件
-  │   ├── hybrid                 # webview本地页面
-  │   ├── js_sdk                 # 外部js
-  │   ├── lang                   # 国际化 language
-  │   ├── package-activities     # 活动分包
-  │   ├── package-refund         # 退款分包
-  │   ├── package-shop           # 店铺分包
-  │   ├── package-user           # 用户分包
-  │   ├── pages                  # 主包
-  │   ├── router                 # 路由配置
-  │   ├── static                 # 静态资源
-  │   ├── uni_modules            # uni第三方组件
-  │   ├── utils                  # 全局公用方法
-  │   ├── wxs                    # wxs
-  │   ├── app.css                # 全局样式
-  │   ├── App.vue                # 入口页面
-  │   ├── main.js                # 入口文件 加载组件 初始化等
-  │   ├── manifest.json          # uniapp 项目配置
-  │   ├── pages.json             # 页面配置文件
-  │   ├── manifest.json          # uniapp 项目配置
-  │   ├── popup.scss             # 全局弹窗样式
-  │   └── uni.scss         	   # uni样式变量
-  ├── .editorconfig              # 编辑器配置
-  ├── .env.xxx                   # 环境变量配置
-  ├── .eslintxxx.xx              # eslint 相关配置
-  ├── .gitignore                 # git 忽略清单
-  ├── .npmrc                 	   # npm 配置
-  ├── Dockerfile                 # docker部署配置
-  ├── index.html             	   # html 模板
-  ├── nginx.conf                 # nginx 配置
-  ├── package.json               # package.json
-  ├── tsconfig.json			   # ts 编译配置
-  └── vite.config.js             # vite 配置文件
-  ```
+本项目是一个uniapp的项目，使用cli进行构建，目录结构如下
 
-
-  ## 运行相关截图
-
-  ### 1.小程序截图
-
-  ![小程序](doc/img/readme/小程序.png)
-
-  ### 2.uni-app截图
-
-  ![uniapp](doc/img/readme/uniapp.png)
-
-  ## 提交反馈
-
-  - Mall4j官网 [https://www.mall4j.com](https://www.mall4j.com)
-
-  - 如需购买商业版源码，请联系Mall4j官网
-
-
-  - mall4cloud开源技术QQ群：561496886
-
-  ![输入图片说明](https://images.gitee.com/uploads/images/2021/1119/134157_dd977d46_5094767.png "微信图片_20211119134107.png")
-
-  ## springboot版本商城请点击
-
-[https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j)
+```
+├── dist                       # 构建相关
+├── src                        # 源代码
+│   ├── components             # 全局公用组件
+│   ├── hybrid                 # webview本地页面
+│   ├── js_sdk                 # 外部js
+│   ├── lang                   # 国际化 language
+│   ├── package-activities     # 活动分包
+│   ├── package-refund         # 退款分包
+│   ├── package-shop           # 店铺分包
+│   ├── package-user           # 用户分包
+│   ├── pages                  # 主包
+│   ├── router                 # 路由配置
+│   ├── static                 # 静态资源
+│   ├── uni_modules            # uni第三方组件
+│   ├── utils                  # 全局公用方法
+│   ├── wxs                    # wxs
+│   ├── app.css                # 全局样式
+│   ├── App.vue                # 入口页面
+│   ├── main.js                # 入口文件 加载组件 初始化等
+│   ├── manifest.json          # uniapp 项目配置
+│   ├── pages.json             # 页面配置文件
+│   ├── manifest.json          # uniapp 项目配置
+│   ├── popup.scss             # 全局弹窗样式
+│   └── uni.scss         	   # uni样式变量
+├── .editorconfig              # 编辑器配置
+├── .env.xxx                   # 环境变量配置
+├── .eslintxxx.xx              # eslint 相关配置
+├── .gitignore                 # git 忽略清单
+├── .npmrc                 	   # npm 配置
+├── Dockerfile                 # docker部署配置
+├── index.html             	   # html 模板
+├── nginx.conf                 # nginx 配置
+├── package.json               # package.json
+├── tsconfig.json			   # ts 编译配置
+└── vite.config.js             # vite 配置文件
+```
 
 
-  ## 更多信息请查看主项目 
-[https://gitee.com/gz-yami/mall4cloud](https://gitee.com/gz-yami/mall4cloud)
+## 运行相关截图
+
+### 1.小程序截图
+
+![Mall4cloud 小程序商城截图](doc/img/readme/小程序.png)
+
+### 2.uni-app截图
+
+![Mall4cloud uni-app 商城截图](doc/img/readme/uniapp.png)
+
+## 提交反馈
+
+- mall4cloud开源技术QQ群：561496886
+
+![Mall4cloud 开源技术交流群二维码](https://images.gitee.com/uploads/images/2021/1119/134157_dd977d46_5094767.png "Mall4cloud 开源技术交流群二维码")
