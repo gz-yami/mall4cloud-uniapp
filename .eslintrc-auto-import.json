@@ -114,6 +114,8 @@
     "DirectiveBinding": true,
     "MaybeRef": true,
     "MaybeRefOrGetter": true,
+    "Slot": true,
+    "Slots": true,
     "onWatcherCleanup": true,
     "useId": true,
     "useModel": true,
