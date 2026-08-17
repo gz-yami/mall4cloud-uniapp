@@ -39,6 +39,10 @@ Mall4cloud 开源版使用 AGPLv3 协议。你可以按协议学习、研究、�
 - 版本价格与功能对比：[https://www.mall4j.com/price/](https://www.mall4j.com/price/)
 - 客户案例：[https://www.mall4j.com/case/](https://www.mall4j.com/case/)
 
+## 商业授权支持
+
+![商务二维码](doc/img/readme/商务二维码.png)
+
 ## 开源版与企业项目
 
 | 场景 | 本仓库 | 企业项目 |
