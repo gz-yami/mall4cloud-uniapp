@@ -58,10 +58,6 @@ export default {
     // #ifdef MP-WEIXIN
     uni.setStorageSync('cloudAppType', AppType.MINI)
     // #endif
-
-    // #ifdef MP-ALIPAY
-    uni.setStorageSync('cloudAppType', AppType.ALI)
-    // #endif
   },
   globalData: {
     // 定义全局请求队列
