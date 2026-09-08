@@ -158,5 +158,6 @@ pnpm run build:h5
 ## 提交反馈
 
 - mall4cloud开源技术QQ群：561496886
+- Mall4j 商城官网：[https://www.mall4j.com](https://www.mall4j.com)
 
 ![Mall4cloud 开源技术交流群二维码](https://images.gitee.com/uploads/images/2021/1119/134157_dd977d46_5094767.png "Mall4cloud 开源技术交流群二维码")
