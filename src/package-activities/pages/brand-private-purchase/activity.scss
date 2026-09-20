@@ -1,0 +1,119 @@
+.invite-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.invite-header {
+  padding: 80rpx 30rpx 20rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.invite-tips {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.code-boxes {
+  display: flex;
+  justify-content: center;
+  margin: 60rpx 40rpx 0;
+}
+
+.code-box {
+  width: 80rpx;
+  height: 88rpx;
+  margin: 0 10rpx;
+  border-bottom: 4rpx solid #ddd;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.code-box.active,
+.code-box.filled {
+  border-bottom-color: #333;
+}
+
+.keyboard {
+  margin-top: auto;
+  padding: 16rpx 12rpx calc(16rpx + env(safe-area-inset-bottom));
+  background: #d8d8d8;
+}
+
+.keyboard-row {
+  display: flex;
+  margin-bottom: 12rpx;
+}
+
+.keyboard-row:last-child {
+  margin-bottom: 0;
+}
+
+.keyboard-key {
+  flex: 1;
+  height: 92rpx;
+  margin: 0 8rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.keyboard-key.placeholder {
+  background: transparent;
+}
+
+.keyboard-key.delete {
+  background: transparent;
+}
+
+.delete-btn {
+  width: 120rpx;
+  height: 72rpx;
+  background: #ececec;
+  border: 2rpx solid #c8c8c8;
+  border-left: 2rpx solid #c8c8c8;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon {
+  position: relative;
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.delete-icon::before,
+.delete-icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4rpx;
+  height: 100%;
+  background: #333;
+  border-radius: 2rpx;
+}
+
+.delete-icon::before {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.delete-icon::after {
+  transform: translateX(-50%) rotate(-45deg);
+}

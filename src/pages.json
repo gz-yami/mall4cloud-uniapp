@@ -138,6 +138,19 @@
 			}
 		}
   ],
+  "subPackages": [
+    {
+      "root": "package-activities",
+      "pages": [
+        {
+          "path": "pages/brand-private-purchase/activity",
+          "style": {
+            "navigationBarTitleText": "输入邀请码"
+          }
+        }
+      ]
+    }
+  ],
   "tabBar": {
     "selectedColor": "#fc1b35",
     "color": "#333333",
